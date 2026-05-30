@@ -1,0 +1,13 @@
+from collections import Counter
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s)!=len(t):
+            return False
+        s_freq=Counter(s) #O(n)
+        t_freq=Counter(t) #O(n)
+        # if s_freq.keys()==t_freq.keys() and s_freq.items()==t_freq.items():
+        #     return True
+        if s_freq==t_freq:
+            return True
+        return False
+        
